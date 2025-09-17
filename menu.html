@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>القائمة - Panini Mohssine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>قائمة الطعام</h1>
+</header>
+
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="about.html">من نحن</a>
+  <a href="menu.html">القائمة</a>
+  <a href="contact.html">تواصل معنا</a>
+</nav>
+
+    <section id="menu">
+    <h2 style="text-align:center;">قائمة الطعام</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:20px;">
+
+        <!-- بانيني -->
+        <div onclick="toggleMenu('paniniMenu')" 
+             style="cursor:pointer; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 3px 6px rgba(0,0,0,0.1); text-align:center;">
+            <img src="panini1.jpg" alt="بانيني" style="width:100%; height:150px; object-fit:cover;">
+            <div style="background:rgba(0,0,0,0.6); color:white; padding:10px;">
+                <h3 style="margin:0; font-size:20px;">🍞 بانيني</h3>
+                <p style="margin:5px 0 0; font-size:14px;">10 أنواع</p>
+            </div>
+        </div>
+
+        <!-- بيتزا -->
+        <div onclick="toggleMenu('pizzaMenu')" 
+             style="cursor:pointer; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 3px 6px rgba(0,0,0,0.1); text-align:center;">
+            <img src="pizz.jpg" alt="بيتزا" style="width:100%; height:150px; object-fit:cover;">
+            <div style="background:rgba(0,0,0,0.6); color:white; padding:10px;">
+                <h3 style="margin:0; font-size:20px;">🍕 بيتزا</h3>
+                <p style="margin:5px 0 0; font-size:14px;">5 أنواع</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- قائمة بانيني -->
+    <div id="paniniMenu" style="display:none; margin:30px 0;">
+        <h2 style="text-align:center;">أنواع البانيني</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:20px;">
+
+            <div class="product">
+                <img src="paninisaussisse.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini Saussisse</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini Saussisse - 16dh')">إضافة للطلب</button>
+            </div>
+
+            <div class="product">
+                <img src="panini2.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini Dinde</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini Dinde - 16dh')">إضافة للطلب</button>
+            </div>
+
+            <div class="product">
+                <img src="panini3.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini Mixte</h4>
+                <p>17 dh</p>
+                <button onclick="addToCart('Panini Mixte - 17dh')">إضافة للطلب</button>
+            </div>
+<div class="product">
+                <img src="paninikefta.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini viande hachee</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini viande hachee - 16dh')">إضافة للطلب</button>
+            </div>
+            <div class="product">
+                <img src="paninimohssine.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini mohssine</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini mohssine - 16dh')">إضافة للطلب</button>
+            </div>
+            <div class="product">
+                <img src="paninithon.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini Thon</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini Thon - 16dh')">إضافة للطلب</button>
+            </div>
+            <div class="product">
+                <img src="paninithonfrmaj.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>Panini thon frmaj</h4>
+                <p>16 dh</p>
+                <button onclick="addToCart('Panini thon - 16dh')">إضافة للطلب</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- قائمة بيتزا -->
+    <div id="pizzaMenu" style="display:none; margin:30px 0;">
+        <h2 style="text-align:center;">أنواع البيتزا</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:20px;">
+
+            <div class="product">
+                <img src="pizzamargarita.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>بيتزا مارجريتا</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('بيتزا مارجريتا - 30dh')">إضافة للطلب</button>
+            </div>
+
+            <div class="product">
+                <img src="pizzasucuk.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>بيتزا سجوق</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('بيتزا سجوق - 30dh')">إضافة للطلب</button>
+            </div>
+            <div class="product">
+                <img src="pizzakefta.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>pizzakefta</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('pizzakefta - 30dh')">إضافة للطلب</button>
+            </div>
+             <div class="product">
+                <img src="pizz.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>pizzasaussisse</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('pizza - 30dh')">إضافة للطلب</button>
+            </div>
+             <div class="product">
+                <img src="pizzathon.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>pizza Thon</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('pizzathon - 30dh')">إضافة للطلب</button>
+            </div>
+             <div class="product">
+                <img src="pizzamixte.jpg" style="width:100%; height:150px; object-fit:cover; border-radius:8px;">
+                <h4>pizza Mixte</h4>
+                <p>30 dh</p>
+                <button onclick="addToCart('pizzamixte - 30dh')">إضافة للطلب</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- زر إتمام الطلب -->
+    <button id="checkoutBtn" onclick="checkout()">إتمام الطلب عبر واتساب</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
